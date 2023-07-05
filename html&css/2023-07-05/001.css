@@ -1,0 +1,52 @@
+/* 학습용 기본 스타일 */
+body {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+}
+
+h1 ~ section {
+  margin: 0 2rem;
+}
+
+.practice {
+  background-color: rgb(225, 225, 225);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* 연습: 특성 선택자 */
+[class^="btn"] {
+  color: #fff;
+  background: black;
+}
+
+/* 연습: 자손 선택자 */
+.combinator section span {
+  background-color: #fff;
+}
+
+/* 연습: 자식 선택자 */
+.combinator section > span {
+  color: red;
+}
+
+/* 연습: 일반 형제 선택자 */
+.combinator section ~ p {
+  background-color: rgb(236, 217, 246);
+}
+
+/* 연습: 인접 형제 선택자 */
+.combinator section + p {
+  color: blue;
+}
+
+/* 연습: wbr 태그 */
+.wbr-tag .ko {
+  word-break: keep-all;
+}

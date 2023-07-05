@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <h1 id="heading">
+      오늘의 진도: HTML 문서해부, CSS 선택자, HTML 텍스트 관련 태그
+    </h1>
+
+    <section>
+      <h2>1. CSS 선택자</h2>
+      <section>
+        <h3>- 특성 선택자([])</h3>
+        <div class="practice attribute-selectors">
+          <button class="test btn">테스트 버튼</button>
+          <button class="btn">버튼</button>
+        </div>
+      </section>
+
+      <section>
+        <h3>
+          - 자손 선택자( ), 자식 선택자(>), 일반 형제 선택자(~), 인접 형제
+          선택자(+)
+        </h3>
+        <div class="practice combinator">
+          <section>
+            <div>
+              나는
+              <span>보라</span>
+            </div>
+            <span>초록</span>
+            <span>파랑</span>
+          </section>
+          <p>section의 인접 형제</p>
+          <p>section의 형제</p>
+        </div>
+      </section>
+    </section>
+
+    <section>
+      <h2>2. HTML 텍스트 관련 태그</h2>
+      <section>
+        <h3>- a</h3>
+        <div class="practice">
+          <a href="https://www.naver.com/">네이버로 이동합니다.</a>
+          <a href="//www.naver.com">네이버로 이동합니다.</a>
+
+          <a href="./002.html" target="_blank"
+            >새 탭으로 002파일로 이동합니다.</a
+          >
+          <a href="./002.html" download>002파일로 다운로드 받습니다.</a>
+
+          <a href="#heading">heading로 이동합니다.</a>
+          <a href="tel:010-000-0000">010-000-0000</a>
+          <a href="mailto:timetam24@naver.com">탐탐에게 메일 보내기</a>
+        </div>
+      </section>
+
+      <section>
+        <h3>- wbr</h3>
+        <div class="practice wbr-tag">
+          <p>아아아아아아아아 오오오오 아아아아아아아아</p>
+          <p>oooooooooo aaaa bbbb cccc oooooooooo</p>
+          <p class="ko">
+            아아아아아아아아<wbr />오오오오<wbr />아아아아아아아아
+          </p>
+          <p>oooooooooo<wbr />aaaa<wbr />bbbb<wbr />cccc<wbr />oooooooooo</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>- code</h3>
+        <div class="practice">
+          <code>push()</code>
+        </div>
+      </section>
+
+      <section>
+        <h3>- pre</h3>
+        <div class="practice">
+          <pre>
+                ⊂_ヽ
+                  ＼＼  Λ＿Λ
+                   ＼( ‘ㅅ’ ) 두둠칫☆
+                    >　⌒ヽ
+                   / 　 へ＼
+                   /　　/　＼＼
+                   ﾚ　ノ　　 ヽ_つ
+                  /　/두둠칫★
+                  /　/|
+                 (　(ヽ
+                 |　|、＼
+                 | 丿 ＼ ⌒)
+                 | |　　) /
+                `ノ )　　Lﾉ
+                </pre
+          >
+        </div>
+      </section>
+
+      <section>
+        <h3>- abbr</h3>
+        <div class="practice">
+          <abbr title="HyperText Markup Language">HTML</abbr>
+          <abbr title="Cascading Style Sheets">CSS</abbr>
+        </div>
+      </section>
+
+      <section>
+        <h3>- dfn</h3>
+        <div class="practice">
+          <p>
+            <dfn id="html">
+              <abbr title="HyperText Markup Language">HTML</abbr>
+            </dfn>
+            웹 페이지의 의미론과 구조를 만드는 데 사용되는 마크업 언어입니다.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3>- kbd</h3>
+        <div class="practice">
+          <p>
+            맥 브라우저 강력 새로고침 <kbd>Cmd</kbd> + <kbd>Shift</kbd> +
+            <kbd>R</kbd>
+          </p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
