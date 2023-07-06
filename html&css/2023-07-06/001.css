@@ -1,0 +1,308 @@
+/* 학습용 기본 스타일 */
+body {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+main {
+  margin: 1rem;
+}
+
+main section {
+  margin-top: 3rem;
+}
+
+/* 연습 */
+/* color */
+.color p {
+  color: blue;
+}
+
+.color p strong {
+  border-bottom: 5px solid currentColor;
+}
+
+/* font-family */
+.font-family {
+  color: #999;
+  font-family: "Pretendard-Regular", Verdana, sans-serif;
+}
+
+/* font-face */
+@font-face {
+  font-family: "KyoboHandwriting2022khn";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  /* 눈누 - 교보손글씨 2022 김혜남 */
+}
+
+.font-face {
+  font-family: "KyoboHandwriting2022khn";
+}
+
+/* font-size */
+/* px */
+.px .btn1 {
+  font-size: 20px;
+}
+.px .btn2 {
+  font-size: 40px;
+}
+.px .btn3 {
+  font-size: 80px;
+}
+.px .btn1 {
+  padding: 4px 20px;
+  border-radius: 4px;
+}
+.px .btn2 {
+  padding: 8px 40px;
+  border-radius: 8px;
+}
+.px .btn3 {
+  padding: 16px 80px;
+  border-radius: 16px;
+}
+
+/* em */
+.em .btn1 {
+  font-size: 2em;
+}
+.em .btn2 {
+  font-size: 4em;
+}
+.em .btn3 {
+  font-size: 8em;
+}
+
+.em .btn1,
+.em .btn2,
+.em .btn3 {
+  padding: 0.2em 1em;
+  border-radius: 0.25em;
+}
+
+/* rem 단위의 기준 사이즈
+html {
+  font-size: 10px;
+} */
+
+/* rem */
+.rem .btn1 {
+  font-size: 2rem;
+}
+.rem .btn2 {
+  font-size: 4rem;
+}
+.rem .btn3 {
+  font-size: 8rem;
+}
+.rem .btn1 {
+  padding: 0.4rem 2rem;
+  border-radius: 0.4rem;
+}
+.rem .btn2 {
+  padding: 0.5rem 4rem;
+  border-radius: 0.8rem;
+}
+.rem .btn3 {
+  padding: 1.6rem 8rem;
+  border-radius: 1.6rem;
+}
+
+/* 폰트 사이즈
+html {
+  font-size: 10px;
+} */
+/* rem & em */
+.rem-em {
+  font-size: 2rem;
+}
+.rem-em .btn1 {
+  font-size: 2rem;
+}
+.rem-em .btn2 {
+  font-size: 4rem;
+}
+.rem-em .btn3 {
+  font-size: 8rem;
+}
+.rem-em .btn1,
+.rem-em .btn2,
+.rem-em .btn3 {
+  padding: 0.2em 1em;
+  border-radius: 0.25em;
+}
+
+/* font-weight */
+.font-weight {
+  font-weight: 900;
+}
+
+.font-weight span {
+  font-weight: lighter;
+}
+
+/* text-transform */
+.first-letter-uppercase::first-letter {
+  text-transform: uppercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* text-decoration */
+.text-decoration {
+  text-decoration-color: red;
+  text-decoration-line: underline overline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 3px;
+  /* text-decoration: red overline dashed 3px; */
+}
+
+/* text-shadow */
+.text-shadow {
+  /* text-shadow: 5px 5px #558abb; */
+  text-shadow: #fc0 1px 0 10px;
+  /* text-shadow: red 2px 5px; */
+  /* text-shadow: 5px 10px; */
+  /* text-shadow: 1px 1px 2px rgb(205, 50, 50), 0 0 1em blue, 0 0 0.2em blue; */
+}
+
+/* text-indent */
+.text-indent {
+  text-indent: 30%;
+}
+
+/* word-break */
+.word-break div {
+  display: flex;
+  gap: 30px;
+}
+.word-break div h2,
+.word-break div p {
+  flex-grow: 1;
+}
+
+.en-break,
+.ko-break {
+  background-color: pink;
+  word-break: break-all;
+}
+.en-keep,
+.ko-keep {
+  background: skyblue;
+  word-break: keep-all;
+}
+
+/* text-overflow */
+.text-overflow p {
+  margin-bottom: 1rem;
+}
+
+.text-overflow .ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-overflow .multi-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* ol & counter-style */
+@counter-style stress {
+  system: fixed;
+  symbols: ☹️ 😠 😡 🤬 🤯 😊 😁 😘;
+  suffix: " ";
+}
+
+.counter-style-with-ol li {
+  list-style: stress;
+}
+
+/* ul & counter-style */
+/* bullet을 가상 요소를 사용하여 스타일 처리하기 */
+.counter-style-with-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.counter-style-with-ul li {
+  position: relative;
+  padding-left: 1em;
+}
+.counter-style-with-ul li::before {
+  content: "";
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  transform: rotate(45deg);
+  border: 2px solid royalblue;
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+}
+
+/* dynamic-pseudo-classes */
+.dynamic-pseudo-classes a {
+  color: skyblue;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.dynamic-pseudo-classes a:visited {
+  color: rgb(224, 86, 255);
+}
+
+.dynamic-pseudo-classes a:active {
+  background-color: aqua;
+}
+
+.dynamic-pseudo-classes a:focus {
+  background-color: salmon;
+  font-size: 0.5em;
+}
+
+.dynamic-pseudo-classes a:hover {
+  font-size: 2em;
+}
+
+/* structural-pseudo-classes */
+.structural-pseudo-classes :nth-of-type(1) {
+  color: rgb(3, 160, 58);
+}
+
+.structural-pseudo-classes :only-of-type {
+  background-color: rgb(192, 237, 255);
+}
+
+/* pseudo-elements */
+.pseudo-elements p::before {
+  content: "7기 여러분 ";
+}
+
+.pseudo-elements p::after {
+  content: " 💕";
+}
