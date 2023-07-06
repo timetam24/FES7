@@ -1,0 +1,46 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  border: 3px solid black;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  width: 40%;
+  -moz-box-shadow: 0 0 5px 3px #b5b5b5;
+  -webkit-box-shadow: 0 0 5px 3px#b5b5b5;
+  box-shadow: 0 0 5px 3px #b5b5b5;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+article p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+@font-face {
+  font-family: "KBO-Dia-Gothic_bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+article {
+  font-family: "KBO-Dia-Gothic_bold";
+}
+
+strong {
+  text-shadow: 2px 1px 5px red;
+}
