@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <h1>
+      오늘의 진도: <br />
+      <span
+        >CSS 선택자 우선 순위, block vs inline vs inline-block, CSS Box Model,
+        콘텐츠 카테고리, display 속성, reset.css, 이미지
+      </span>
+    </h1>
+
+    <main>
+      <h2>1. CSS 선택자 우선 순위</h2>
+
+      <section class="specificity">
+        <!-- 구체성의 원칙 -->
+        <p id="id" class="class">1. 이 글자는 어떤 색일까요?</p>
+        <p class="class" style="color: red">2. 이 글자는 어떤 색일까요??</p>
+        <br />
+        <section>
+          <article>
+            <div>
+              <ul class="ul">
+                <li>
+                  <p>
+                    <strong>
+                      <span>
+                        <a href="#" class="click">
+                          1. 이 글자는 어떤 색일까요? 2. 배경색은 어떤 색일까요?
+                        </a>
+                      </span>
+                    </strong>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <h2>2. block vs inline vs inline-block</h2>
+      <section>
+        <!-- inline -->
+        <img
+          src="https://cdn.pixabay.com/photo/2023/04/30/11/44/spring-7960360_1280.jpg"
+          alt="flower"
+        />
+        <em>봄봄봄봄이 왔어요</em>
+
+        <!-- inline-block -->
+        <button>Click</button>
+      </section>
+
+      <h2>3. CSS Box Model</h2>
+      <section>
+        <!-- box-sizing -->
+        <div class="box-sizing">hello</div>
+      </section>
+
+      <section class="width">
+        <!-- width -->
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
+          molestias animi error nobis ut sapiente magni ipsa eaque eveniet
+          voluptatibus illo alias ex, at aut enim pariatur, tenetur harum
+          obcaecati?
+        </p>
+        <p class="max-content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
+          molestias animi error nobis ut sapiente magni ipsa eaque eveniet
+          voluptatibus illo alias ex, at aut enim pariatur, tenetur harum
+          obcaecati?
+        </p>
+        <p class="min-content">Lorem ipsum dolor sit</p>
+        <p class="min-content">한글테스트</p>
+        <p class="fit-content">Lorem ipsum dolor sit</p>
+
+        <p class="fit-content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
+          molestias animi error nobis ut sapiente magni ipsa eaque eveniet
+          voluptatibus illo alias ex, at aut enim pariatur, tenetur harum
+          obcaecati?
+        </p>
+      </section>
+
+      <section class="height">
+        <!-- height -->
+        <div class="box1">
+          box1
+          <div class="box2">box2</div>
+        </div>
+      </section>
+
+      <section class="margin-collasing">
+        <!-- margin-collasing -->
+        <p class="a">A</p>
+        <p class="b">B</p>
+
+        <div class="margin-collasing-parent">
+          <p class="c">C</p>
+        </div>
+      </section>
+
+      <section>
+        <!-- gradient -->
+        <div class="gradient">border-gradient</div>
+      </section>
+
+      <section>
+        <!-- border-image -->
+        <div class="border-image">border-image</div>
+      </section>
+
+      <section class="overflow">
+        <!-- overflow -->
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio,
+        molestiae hic. Laboriosam commodi fugiat, nulla odit porro modi cum
+        numquam! Inventore in rem ut dolorum rerum nesciunt officiis labore
+        quisquam!
+      </section>
+
+      <section class="border-radius-container">
+        <!-- border-radius -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+
+      <section class="background-container">
+        <!-- background & box-shadow -->
+        <div class="background">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          dicta illum quam ullam officiis! Numquam cum, quaerat unde quam beatae
+          dolores officia, maxime laborum itaque repellendus nisi incidunt
+          laboriosam corrupti. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Itaque fuga voluptate obcaecati quas laudantium
+          reprehenderit fugit explicabo neque tempora? Ipsum corrupti animi
+          libero ullam veniam eius quis excepturi? Ducimus, nisi?
+        </div>
+      </section>
+
+      <section class="background-practice">
+        <!-- background-practice -->
+        <div class="background1"></div>
+        <div class="background2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quia
+          numquam labore iste dolorum impedit, fuga ipsum consequatur, ad quos
+          corporis expedita, molestias laboriosam ratione voluptatum similique.
+          Voluptatibus, aperiam deserunt! Nemo facere deleniti cupiditate
+          laboriosam blanditiis minima, vero consequatur perspiciatis, tenetur,
+          sed omnis enim reiciendis possimus alias. Nisi rerum, ab eius quaerat
+          dolore aspernatur explicabo deserunt? Explicabo ipsum voluptates
+          sequi? Eligendi, praesentium quisquam! Impedit facilis consequuntur
+          quia, perferendis eveniet ipsa deserunt fuga veniam adipisci autem
+          amet vero distinctio beatae assumenda quisquam numquam incidunt
+          delectus similique soluta eius reiciendis doloremque? Eos. Ipsum amet
+          debitis animi vero odio vel consequuntur cumque quae facilis
+          voluptatem, aliquam ipsam atque minima dignissimos iure. Doloribus
+          facere ex nesciunt quas enim et fugit ab quidem quis natus? Optio nam
+          aliquid eum obcaecati maxime officia dolorum, quia doloribus magni
+          exercitationem laboriosam nihil perferendis provident sunt vel at
+          dolores tempora ipsam velit quibusdam. Animi asperiores rem natus
+          delectus placeat.
+        </div>
+        <div class="background3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quia
+          numquam labore iste dolorum impedit, fuga ipsum consequatur, ad quos
+          corporis expedita, molestias laboriosam ratione voluptatum similique.
+          Voluptatibus, aperiam deserunt! Nemo facere deleniti cupiditate
+          laboriosam blanditiis minima, vero consequatur perspiciatis, tenetur,
+          sed omnis enim reiciendis possimus alias. Nisi rerum, ab eius quaerat
+          dolore aspernatur explicabo deserunt? Explicabo ipsum voluptates
+          sequi? Eligendi, praesentium quisquam! Impedit facilis consequuntur
+          quia, perferendis eveniet ipsa deserunt fuga veniam adipisci autem
+          amet vero distinctio beatae assumenda quisquam numquam incidunt
+          delectus similique soluta eius reiciendis doloremque? Eos. Ipsum amet
+          debitis animi vero odio vel consequuntur cumque quae facilis
+          voluptatem, aliquam ipsam atque minima dignissimos iure. Doloribus
+          facere ex nesciunt quas enim et fugit ab quidem quis natus? Optio nam
+          aliquid eum obcaecati maxime officia dolorum, quia doloribus magni
+          exercitationem laboriosam nihil perferendis provident sunt vel at
+          dolores tempora ipsam velit quibusdam. Animi asperiores rem natus
+          delectus placeat.
+        </div>
+      </section>
+
+      <h2>4. 이미지</h2>
+      <section>
+        <!-- 이미지에 캡션 달기 -->
+        <figure>
+          <img
+            src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg"
+            alt="귀여운 아기 고양이"
+          />
+          <figcaption>눈이 초롱초롱💕</figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
