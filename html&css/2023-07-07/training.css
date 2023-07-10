@@ -54,8 +54,11 @@ div {
   border-radius: 50px;
   background: linear-gradient(to right, #9152f6, #3b69f3);
   color: white;
-  outline: 3px dashed #e8d9ff;
-  box-shadow: 0 0 0 3px white;
+  border: 5px dashed #e8d9ff;
+  background-clip: padding-box;
+  /* outline: 3px dashed #e8d9ff;
+  box-shadow: 0 0 0 3px white; */
+  /* 접근성 때문에 outline보다 border 사용이 better!*/
 }
 
 .box3 {
