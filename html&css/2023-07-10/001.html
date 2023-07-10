@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <h1>
+      오늘의 진도: <br />
+      <span>이미지 비율 유지하기, position, z-index</span>
+    </h1>
+
+    <main>
+      <h2>1. 이미지 비율 유지하기</h2>
+      <section class="aspect-ratio">
+        <!-- 첫 번째 방법: aspect-ratio -->
+        <img src="./images/weniv-binky.png" alt="위니브 토끼 캐릭터 빙키" />
+        <img src="./images/weniv-chilli.png" alt="위니브 다람쥐 캐릭터 칠리" />
+        <img src="./images/weniv-garry.png" alt="위니브 개구리 캐릭터 개리" />
+        <img src="./images/weniv-licat.png" alt="위니브 고양이 캐릭터 라이캣" />
+        <img src="./images/weniv-suri.png" alt="위니브 수달 캐릭터 수리" />
+        <img
+          src="./images/weniv-wade.png"
+          alt="위니브 나무늘보 캐릭터 웨이드"
+        />
+      </section>
+
+      <section>
+        <!-- 두 번째 방법: padding %값 사용 -->
+        <div class="thumb">
+          <div>
+            <img src="./images/weniv-binky.png" alt="위니브 토끼 캐릭터 빙키" />
+          </div>
+        </div>
+        <div class="thumb">
+          <div>
+            <img
+              src="./images/weniv-chilli.png"
+              alt="위니브 다람쥐 캐릭터 칠리"
+            />
+          </div>
+        </div>
+        <div class="thumb">
+          <div>
+            <img
+              src="./images/weniv-garry.png"
+              alt="위니브 개구리 캐릭터 개리"
+            />
+          </div>
+        </div>
+        <div class="thumb">
+          <div>
+            <img
+              src="./images/weniv-licat.png"
+              alt="위니브 고양이 캐릭터 라이캣"
+            />
+          </div>
+        </div>
+        <div class="thumb">
+          <div>
+            <img src="./images/weniv-suri.png" alt="위니브 수달 캐릭터 수리" />
+          </div>
+        </div>
+        <div class="thumb">
+          <div>
+            <img
+              src="./images/weniv-wade.png"
+              alt="위니브 나무늘보 캐릭터 웨이드"
+            />
+          </div>
+        </div>
+      </section>
+
+      <h2>2. position</h2>
+      <section class="parent">
+        <!-- position -->
+        <div class="box fixed">box fixed</div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis illo
+        incidunt sapiente similique laborum quasi sint culpa? Laudantium
+        provident accusantium quo itaque veniam, sed alias dolorem dolorum nulla
+        cupiditate commodi.
+        <div class="box sticky">box sticky</div>
+      </section>
+
+      <h2>3. z-index</h2>
+      <section class="z-index">
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+      </section>
+    </main>
+  </body>
+</html>

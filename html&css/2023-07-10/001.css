@@ -1,0 +1,119 @@
+/* 학습용 기본 스타일 */
+body {
+  padding: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+section:not(h2 + section) {
+  margin-bottom: 8rem;
+}
+
+/* 연습 */
+/* 첫 번째 방법: aspect-ratio */
+.aspect-ratio img {
+  width: 30%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+/* 두 번째 방법: padding %값 사용 */
+.thumb {
+  width: 30%;
+  display: inline-block;
+}
+
+.thumb div {
+  position: relative;
+  height: 0;
+  padding-top: 50%;
+  /* overflow: hidden; */
+}
+
+.thumb div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* position */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(208, 255, 0);
+}
+
+.relative {
+  position: relative;
+  right: 50px;
+}
+
+.absolute {
+  position: absolute;
+  top: 50px;
+}
+
+.parent {
+  position: relative;
+  height: 700px;
+  /* 부모  height 높이 값만큼 sticky가 고정되기 때문에 지정해줘야 한다. */
+}
+
+.fixed {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 10px;
+  left: 10px;
+}
+
+/* z-index */
+.z-index {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.506);
+  height: 300px;
+}
+
+.z-index div {
+  width: 100px;
+  height: 100px;
+}
+
+.z-index div:first-of-type {
+  background-color: red;
+  position: absolute;
+  z-index: 3;
+}
+
+.z-index div:nth-of-type(2) {
+  background-color: blue;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 2;
+}
+
+.z-index div:nth-of-type(3) {
+  background-color: purple;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
