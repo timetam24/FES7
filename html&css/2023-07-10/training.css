@@ -1,0 +1,87 @@
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.card-ui {
+  display: inline-block;
+  width: 288px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+}
+
+.card-ui img {
+  width: 100%;
+  aspect-ratio: 288/196;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-ui .text-group {
+  padding: 24px 16px 16px 16px;
+}
+
+.card-ui h2 {
+  color: var(--text-1, #29363d);
+  font-size: 16px;
+  font-family: "Pretendard-Bold";
+  /* 제목 한 줄 말줄임 처리 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-ui p {
+  color: var(--text-2, #5a6a72);
+  font-size: 12px;
+  font-family: "Pretendard-Bold";
+  margin: 16px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.6;
+  /* 내용이 적을 때 전체 상자 크기가 줄어들지 않도록 height 설정 */
+  height: calc(1em * 1.6 * 2);
+}
+
+.card-ui button {
+  color: #29363d;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: "Pretendard-Bold";
+  text-decoration-line: underline;
+}
