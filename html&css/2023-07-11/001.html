@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <h1>
+      오늘의 진도: <br />
+      <span
+        >Layout History, Sections, float, flex, 웹 접근성을 고려한
+        숨김처리</span
+      >
+    </h1>
+
+    <main>
+      <h2>1. float</h2>
+      <section class="float">
+        <span>안녕하세요</span>
+        <img src="http://placehold.it/100x100" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          repudiandae iusto itaque necessitatibus, odit harum ea fugiat!
+          Veritatis dolorum cupiditate dicta aliquid at expedita quas officiis?
+          Suscipit laudantium cupiditate minus! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Hic voluptates modi doloremque quia,
+          aperiam ipsum vel! Ab architecto fugit optio dolorum vel molestias
+          dicta odio qui, perferendis iste officiis vitae?
+        </p>
+      </section>
+
+      <section class="profile-float clear-fix">
+        <img src="http://placehold.it/100x100" alt="" />
+        <h2>Lorem ipsum dolor</h2>
+        <p>ipsum dolo</p>
+      </section>
+
+      <section class="profile-flex clear-fix">
+        <img src="http://placehold.it/100x100" alt="" />
+        <div>
+          <h2>Lorem ipsum dolor</h2>
+          <p>ipsum dolo</p>
+        </div>
+      </section>
+
+      <h2>2. flex</h2>
+      <section class="flex">
+        <div class="left-side">
+          <div class="box blue">A</div>
+          <div class="box pink">B</div>
+          <div class="box yellow">C</div>
+        </div>
+        <div class="center">
+          <div class="box blue">D</div>
+          <div class="box yellow">E</div>
+        </div>
+        <div class="right-side">
+          <div class="box blue">F</div>
+          <div class="box pink">G</div>
+          <div class="box yellow">H</div>
+        </div>
+      </section>
+      <hr />
+      <section class="wrap">
+        <!-- flex align-items -->
+        <div class="box-a">A</div>
+      </section>
+      <section class="grow shrink">
+        <!-- flex grow & shrink-->
+        <div class="item item1">item A ddddd</div>
+        <div class="item item2">item B ddd</div>
+        <div class="item item3">item C ddddddddd</div>
+        <div class="item item4">item D dddddd</div>
+        <div class="item">item A ddddd</div>
+        <div class="item">item B ddd</div>
+        <div class="item">item C ddddddddd</div>
+        <div class="item">item D dddddd</div>
+      </section>
+
+      <h2>3. 웹 접근성을 고려한 숨김처리</h2>
+      <section class="a11y-hidden">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+          cupiditate voluptatibus, modi dolore totam eligendi laborum. Velit
+          quod error reprehenderit? Accusamus quidem modi cum vero dolor
+          repellat illo ipsa qui.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

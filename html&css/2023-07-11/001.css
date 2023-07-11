@@ -1,0 +1,177 @@
+/* 학습용 기본 스타일 */
+body {
+  padding: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+section:not(h2 + section) {
+  margin-bottom: 8rem;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* 연습 */
+/* float */
+
+.float img {
+  float: left;
+}
+
+.float span {
+  float: left;
+  margin-top: 20px;
+  /* inline, inline-block 요소에 float 속성을 주면 block으로 계산되어 적용된다. */
+}
+
+.float p {
+  clear: both;
+}
+
+/* .profile-float {
+      height: 100px;
+    } */
+
+.profile-float img {
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+.profile-float h2 {
+  padding-top: 24px;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.profile-flex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* flex */
+.flex {
+  background: #ddd;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.blue {
+  background: royalblue;
+}
+
+.pink {
+  background: salmon;
+}
+
+.yellow {
+  background: gold;
+}
+
+.flex > div {
+  height: 300px;
+}
+
+.left-side,
+.center,
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-side {
+  flex-direction: column-reverse;
+}
+
+.wrap {
+  background: #ddd;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.box-a {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  background: royalblue;
+}
+
+/* flex-grow flex-shrink */
+.grow,
+.shrink {
+  height: 200px;
+  display: flex;
+  background-color: #ddd;
+}
+
+.grow .item {
+  background-color: skyblue;
+  border: 2px solid royalblue;
+  /* flex-grow: 1;
+  flex-basis: 0; */
+}
+
+/* .grow .item1 {
+  flex-grow: 2;
+}
+
+.grow .item2 {
+  flex-grow: 1;
+} */
+
+.item1 {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+
+.item4 {
+  order: -1;
+}
+
+/* 텍스트 숨김처리 */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
