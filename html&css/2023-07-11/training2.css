@@ -1,0 +1,112 @@
+body {
+  color: white;
+}
+
+header {
+  background-color: #96c9f2;
+}
+
+section {
+  background-color: #475272;
+}
+
+aside {
+  background-color: #c8f545;
+}
+
+footer {
+  background-color: #fe7769;
+}
+
+/* float 사용하기 */
+header {
+  height: 100px;
+}
+
+section {
+  height: 300px;
+}
+
+aside {
+  height: 300px;
+}
+
+footer {
+  height: 100px;
+}
+
+/* 방법1  aside 기본 너비값 없을때 : section에 CSS 적용*/
+.a1 section {
+  float: left;
+  width: 80%;
+}
+
+/* 방법2 너비값이 있을 때 */
+.a2 section {
+  width: 80%;
+  float: left;
+}
+
+.a2 aside {
+  width: 20%;
+  float: right;
+}
+
+.a2 footer {
+  clear: left;
+}
+
+/* 방법3 clear fix 사용하기 */
+.a3 section {
+  width: 80%;
+  float: left;
+}
+
+.a3 aside {
+  width: 20%;
+  float: right;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header,
+section,
+aside,
+footer,
+.a2 div {
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+/* flex */
+.flex-container {
+  display: flex;
+}
+
+.flex-container section,
+.flex-container aside {
+  flex-basis: 0;
+}
+
+.flex-container section {
+  flex-grow: 3;
+}
+
+.flex-container aside {
+  /* flex-grow: 1; */
+  flex-basis: 150px;
+  flex-shrink: 0;
+}
+
+.flex header,
+.flex section,
+.flex aside,
+.flex footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
