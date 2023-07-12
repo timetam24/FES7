@@ -1,0 +1,58 @@
+/* 학습용 기본 스타일 */
+body {
+  padding: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+section:not(h2 + section) {
+  margin-bottom: 8rem;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* 연습 */
+/* flex */
+.flex {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(141, 141, 141, 0.15);
+}
+
+p {
+  background-color: skyblue;
+  /* width: 100px; */
+  height: 100px;
+
+  /* 비율을 균등하게 유지하고 싶을 때 사용! */
+  flex-basis: 0;
+}
+
+.item1 {
+  flex-grow: 1;
+  /* flex-shrink: 8; */
+  order: 4;
+}
+
+.item2 {
+  flex-grow: 3;
+  /* flex-shrink: 4; */
+}
+
+.item3 {
+  flex-grow: 1;
+  /* flex-shrink: 1; */
+}
