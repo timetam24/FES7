@@ -84,6 +84,11 @@ header p {
   font-size: 12px;
 }
 
+.card-img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .text {
   overflow: hidden;
   display: -webkit-box;
