@@ -1,0 +1,267 @@
+/* 학습용 기본 스타일 */
+body {
+  padding: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+section:not(h2 + section) {
+  margin-bottom: 8rem;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* 연습 */
+/* CSS 변수 */
+:root {
+  --main-color: royalblue;
+  --pane-padding: 0.5em 2em;
+  --border-radius: 0.4em;
+}
+
+.dark {
+  --bg1: #000;
+  --color1: white;
+}
+
+.light {
+  --bg1: #eee;
+  --color1: black;
+}
+
+.css-var section {
+  --color2: red;
+  background-color: var(--bg1);
+  color: var(--color1);
+}
+
+.css-var button {
+  --border-width: 1px 2px 3px 4px;
+
+  padding: var(--pane-padding);
+  border-style: solid;
+  border-color: var(--main-color, blue);
+  border-width: var(--border-width);
+  border-bottom: 3px solid var(--color2);
+}
+
+.css-var p {
+  border-style: solid;
+  border-color: var(--main-color, blue);
+  border-width: var(--border-width, 1px 2px);
+}
+
+/* CSS 함수 */
+.css-func ul,
+.css-func li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.css-func li {
+  background-color: gold;
+  float: left;
+  width: calc((100% - (20px * 2)) / 3);
+}
+
+.css-func li:not(:first-child) {
+  margin-left: 20px;
+}
+
+.css-func li:nth-child(even) {
+  background-color: aqua;
+}
+
+.min-max {
+  background-color: red;
+  margin: auto;
+
+  /* width: 1000px; 
+    max-width: calc(100% - 80px) */
+  width: min(1000px, calc(100% - 80px));
+}
+
+.px20 {
+  font-size: 20px;
+}
+
+.px40 {
+  font-size: 40px;
+}
+
+.clamp {
+  background-color: gold;
+  font-size: clamp(20px, 2.5vw, 40px);
+
+  /* 1vw = 뷰포트 너비 * 0.01 */
+
+  /* 500px x 0.025  = 12.5px */
+  /* 1000px x 0.025  = 25px */
+}
+
+/* CSS 선택자(가상 클래스/가상요소2) */
+.css-select button:enabled:hover {
+  background-color: blue;
+}
+
+/* active 상태는  hover 보다 뒤에 적어줘야함. */
+.css-select button:enabled:active {
+  background-color: red;
+}
+
+.css-select button:enabled {
+  cursor: pointer;
+}
+
+/* 마우스 클릭 시에도 보임 */
+.btn1:focus {
+  border: 10px solid pink;
+}
+
+/* 마우스 클릭 시에는 안보임 */
+.btn2:focus-visible {
+  border: 10px solid pink;
+}
+
+.css-select:focus-within {
+  background-color: skyblue;
+}
+
+/* CSS 선택자(속성 선택자) */
+[title] {
+  background-color: gold;
+}
+
+[title="hello1"] {
+  border: 2px solid royalblue;
+}
+
+[target] {
+  color: red;
+}
+
+[href^="https"] {
+  border: 5px solid green;
+}
+
+/* transform */
+.transform .box {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transform .box:nth-child(even) {
+  background-color: seagreen;
+}
+
+.scale {
+  /* transform-origin: 0 0; */
+  transition: all 1s;
+}
+
+.scale:hover {
+  /* transform: scale(-1, -2); */
+  /* transform: scaleX(1.2) scaleY(2); */
+  /* transform: rotate(0.5turn); */
+  /* transform: translate(-50px, 50px); */
+  /* transform: translateX(-50px) translateY(50px); */
+  /* transform: skew(30deg, 20deg); */
+  transform: translate(10px, 10px) skew(20deg) rotate(0.5turn) scale(0.8);
+  rotate: 40deg;
+  scale: 2;
+}
+
+/* transition */
+.transition .box {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition .box:nth-child(even) {
+  background-color: seagreen;
+}
+
+.transition .translate {
+  transform: translate(50px, 50px);
+}
+
+.transition .position {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.transition .bar {
+  background-color: #ddd;
+  width: 400px;
+  margin: auto;
+  /* overflow: hidden; */
+}
+
+.transition .bar2 {
+  background-color: rgb(65, 105, 225, 0.5);
+  height: 30px;
+  width: 100%;
+  transform-origin: 0 0;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.bar:hover .bar2 {
+  transform: translateX(0);
+}
+
+.bar2:hover {
+  background-color: red;
+}
+
+/* table */
+table {
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+.col1 {
+  width: 10%;
+  background-color: gold;
+}
+
+.col2 {
+  background-color: red;
+}
+
+.col3 {
+  background-color: blue;
+}
+
+caption {
+  caption-side: bottom;
+}

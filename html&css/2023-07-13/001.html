@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <h1>
+      오늘의 진도: <br />
+      <span
+        >CSS 변수, CSS 함수, CSS 선택자(가상 클래스/가상요소2), CSS 선택자(속성
+        선택자), transition, transform, 웹페이지 렌더링, table</span
+      >
+    </h1>
+
+    <main>
+      <h2>1. CSS 변수</h2>
+      <section class="css-var">
+        <div class="light">
+          <section>
+            <button type="button">버튼</button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem quos, unde dolor adipisci iste explicabo consequatur
+              ullam doloremque, aliquam necessitatibus voluptas exercitationem,
+              eveniet voluptatum sunt! Voluptate, accusantium. Te mporibus,
+              facere maiores!
+            </p>
+          </section>
+        </div>
+
+        <div class="dark">
+          <section>
+            <button type="button">버튼</button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem quos, unde dolor adipisci iste explicabo consequatur
+              ullam doloremque, aliquam necessitatibus voluptas exercitationem,
+              eveniet voluptatum sunt! Voluptate, accusantium. Temporibus,
+              facere maiores!
+            </p>
+          </section>
+        </div>
+
+        <button type="button">버튼</button>
+      </section>
+
+      <h2>2. CSS 함수</h2>
+      <section class="css-func">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+        <hr />
+        <div class="min-max">min, max</div>
+        <p class="px20">px20</p>
+        <p class="clamp">clamp</p>
+        <p class="px40">px40</p>
+      </section>
+
+      <h2>3. CSS 선택자(가상 클래스/가상요소2)</h2>
+      <section class="css-select">
+        <button type="button" class="btn1" disabled>버튼</button>
+        <button type="button" class="btn2">버튼</button>
+      </section>
+
+      <h2>4. CSS 선택자(속성 선택자)</h2>
+      <section>
+        <p title="hello1">안녕하세요 1</p>
+        <p>안녕하세요 2</p>
+        <p>안녕하세요 3</p>
+        <p title="hello2">안녕하세요 4</p>
+        <p>안녕하세요 5</p>
+
+        <a href="https://www.naver.com/" title="새창" target="_blank">이동 1</a>
+        <a href="#section1" title="새창" target="_blank">이동 2</a>
+        <a href="https://www.google.com/" title="새창" target="_blank"
+          >이동 3</a
+        >
+        <a href="http://www.google.com/" title="새창" target="_blank">이동 3</a>
+      </section>
+
+      <h2>5. transform</h2>
+      <section class="transform">
+        <div class="box scale">box</div>
+        <div class="box">box</div>
+      </section>
+
+      <h2>6. transition</h2>
+      <section class="transition">
+        <div class="box translate">translate</div>
+        <div class="box position">position</div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="bar">
+          <div class="bar2"></div>
+        </div>
+      </section>
+
+      <h2>7. table</h2>
+      <section class="table">
+        <!-- <h3>테이블의 제목</h3> -->
+        <table>
+          <caption>
+            테이블의 제목, 설명
+          </caption>
+
+          <colgroup>
+            <col class="col1" />
+            <col style="width: 20%" span="2" class="col2" />
+            <col class="col3" />
+          </colgroup>
+
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th scope="col">제목</th>
+              <th scope="col">제목</th>
+              <th scope="col">제목</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">제목</th>
+              <td colspan="2">내용</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <th>제목</th>
+              <td>내용</td>
+              <td rowspan="2">내용</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <th>제목</th>
+              <td>내용</td>
+
+              <td>내용</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th>합계</th>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
