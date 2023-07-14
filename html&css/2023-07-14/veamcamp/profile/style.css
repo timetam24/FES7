@@ -1,0 +1,132 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+/* 초기화 */
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(./images/background.gif);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  background-color: #ddd;
+  width: 800px;
+  margin: 50px auto;
+  height: auto;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* header */
+.header {
+  background-image: url(images/cover06.png);
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0 60px;
+  text-align: center;
+  color: white;
+}
+
+.header img {
+  display: block;
+  margin: 50px auto 10px;
+  width: 140px;
+  border: 6px solid white;
+  border-radius: 200px / 100px;
+}
+
+.header h1 {
+  font-size: 80px;
+  word-spacing: -0.1em;
+  letter-spacing: 0.05em;
+}
+
+.header p {
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  font-size: 14px;
+  border-top: 4px solid white;
+  padding-top: 8px;
+  width: fit-content;
+  margin: 12px auto;
+}
+
+/* contents */
+.section.information {
+  background-image: url(./images/icon-information.png);
+}
+
+.section.skills {
+  background-image: url(./images/icon-skills.png);
+}
+
+.section {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e76a8e;
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.list li {
+  border-left: 6px solid #eaeaea;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #ddd;
+}
+
+.list li:hover {
+  color: #288cf8;
+  border-color: #288cf8;
+}
+
+/* footer */
+.footer {
+  background-color: white;
+  color: #ddd;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.icon {
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 0.4em 1em;
+  margin: 0 0.4em;
+  border-radius: 40px;
+  transition: all 0.4s;
+  color: inherit;
+}
+
+.icon:hover {
+  border-color: black;
+  color: black;
+}
