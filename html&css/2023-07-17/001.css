@@ -1,0 +1,52 @@
+/* 학습용 기본 스타일 */
+body {
+  padding: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+section:not(h2 + section) {
+  margin-bottom: 8rem;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* 연습 */
+/* grid */
+/* autofill & autofit */
+.container {
+  display: grid;
+  width: 600px;
+  gap: 10px;
+  background: #ddd;
+  margin-bottom: 10px;
+  border: 10px solid #aaa;
+}
+
+.container div {
+  background: skyblue;
+  height: 100px;
+  border: 10px solid royalblue;
+  box-sizing: border-box;
+}
+
+.autofill {
+  grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+}
+
+.autofit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+}
