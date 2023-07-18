@@ -22,6 +22,15 @@ body {
 }
 
 /* ground */
+.ground {
+  width: inherit;
+  height: 306px;
+  border-radius: 0px 0px 30px 30px;
+  border-bottom: 10px solid #46260e;
+  background: #9c6035;
+  box-sizing: border-box;
+}
+
 .ground h1 {
   color: #fff;
   font-size: 36px;
@@ -30,19 +39,9 @@ body {
 }
 
 .ground p {
-  width: 260px;
-  height: 130px;
   color: #e8bc9c;
   font-size: 16px;
   font-weight: 400;
   margin: 10px 20px 65px 20px;
-}
-
-.ground {
-  width: inherit;
-  height: 306px;
-  border-radius: 0px 0px 30px 30px;
-  border-bottom: 10px solid #46260e;
-  background: #9c6035;
-  box-sizing: border-box;
+  line-height: 18.4px;
 }
