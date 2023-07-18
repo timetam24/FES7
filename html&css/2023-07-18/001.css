@@ -1,0 +1,185 @@
+/* 학습용 기본 스타일 */
+body {
+  padding: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+h1 span {
+  font-size: 1.2rem;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5rem;
+}
+
+section:not(h2 + section) {
+  margin-bottom: 8rem;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* 연습 */
+/* animation */
+.animation .box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  animation: change 2s 1s infinite;
+}
+
+@keyframes change {
+  0% {
+    scale: 0;
+    background-color: rosybrown;
+  }
+
+  50% {
+    scale: 0.5;
+    background-color: rgb(143, 151, 188);
+  }
+
+  100% {
+    scale: 1.2;
+    background-color: royalblue;
+  }
+}
+
+.licat {
+  width: 168px;
+  height: 200px;
+  border: 4px solid black;
+  background-image: url(https://media.discordapp.net/attachments/1122761439770329108/1130653330151067708/keyframes-licat.png?width=1171&height=199);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+  animation: move-licat 1s infinite steps(6);
+  animation-delay: 2s;
+}
+
+@keyframes move-licat {
+  to {
+    background-position: right 0;
+  }
+}
+
+.licat:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 80%;
+  }
+}
+
+.wrap {
+  width: 500px;
+  background-color: #eee;
+}
+
+.wrap div {
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrap div ~ div {
+  margin-top: 20px;
+}
+
+.animation {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+div.alternate {
+  background-color: royalblue;
+}
+
+.alternate {
+  animation-direction: alternate;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+.alternate-reverse {
+  animation-direction: alternate-reverse;
+}
+
+/* iframe */
+iframe {
+  width: 100%;
+  aspect-ratio: 560/315;
+}
+
+/* svg */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.svg button {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ddd;
+  padding: 0;
+  background: none;
+  vertical-align: top;
+}
+
+.btn-svg1 svg,
+.btn-svg2 svg {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-svg1 svg path,
+.btn-svg2 svg path {
+  fill: white;
+  transition: all 0.3s;
+}
+
+/* 선 색상 바꾸기 */
+.btn-svg1:hover svg path {
+  stroke: royalblue;
+}
+
+/* fill 사용하기 */
+.btn-svg2:hover svg path:first-child {
+  stroke: royalblue;
+  fill: royalblue;
+}
+
+.btn-svg2:hover svg path:last-child {
+  stroke: royalblue;
+}
+
+/* form */
+textarea {
+  resize: none;
+}
