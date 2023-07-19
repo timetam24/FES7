@@ -1,0 +1,55 @@
+/* 연습 */
+/* form 관련 동적 가상 선택자 */
+input[type="text"] {
+  width: 200px;
+}
+
+input[type="text"]:enabled {
+  background-color: skyblue;
+}
+
+input[type="text"]:disabled {
+  background-color: salmon;
+}
+
+input[type="text"]:read-only {
+  border: 2px solid red;
+}
+
+input[type="text"]:read-write {
+  border-top: 4px solid purple;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #767676;
+}
+
+/* 미디어쿼리 */
+body {
+  height: 200vh;
+}
+
+/* @media (min-width:640px) and (max-width:1000px) {
+  body {
+    background-color: skyblue;
+  }
+}
+
+@media (min-height:500px) and (max-height:600px) {
+  body {
+    font-size: 100px;
+  }
+} */
+
+@media (orientation: landscape) {
+  body {
+    background-color: gold;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-color: royalblue;
+  }
+}

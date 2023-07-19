@@ -12,3 +12,4 @@
 | 2023-07-13 | CSS 변수 / CSS 함수 / CSS 선택자(가상 클래스/가상요소2) / CSS 선택자(속성 선택자) / transition / transform / 웹페이지 렌더링 / table | CSS 변수 / CSS 함수 / CSS 선택자(가상 클래스/가상요소2) / CSS 선택자(속성 선택자) / transition / transform / table |
 | 2023-07-17 | Grid                                                                                                                                 | 〃                                                                                                                 |
 | 2023-07-18 | animation / video & audio / iframe / SVG / form                                                                                      | 〃                                                                                                                 |
+| 2023-07-19 | form 관련 동적 가상 선택자 / 미디어쿼리 / 검색엔진 최적화 / favicon                                                                  | form 관련 동적 가상 선택자 / 미디어쿼리 / favicon                                                                  |
