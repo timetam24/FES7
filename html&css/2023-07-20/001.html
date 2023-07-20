@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./001.css" />
+  </head>
+  <body>
+    <h1>
+      오늘의 진도: <br />
+      <span>3d 관련 속성, 반응형 이미지</span>
+    </h1>
+
+    <main>
+      <h2>1. 3d 관련 속성</h2>
+      <section class="3d-wrap">
+        <div class="container">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+        </div>
+      </section>
+
+      <h2>2. 반응형 이미지</h2>
+      <section>
+        <img
+          srcset="
+            ./images/chilli_360px.jpg   360w,
+            ./images/chilli_720px.jpg   720w,
+            ./images/chilli_1440px.jpg 1440w
+          "
+          src="./images/chilli_360px.jpg"
+          alt="다람쥐 캐릭터 칠리"
+        />
+
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcset="./images/lication-chilli.png"
+          />
+          <source
+            media="(max-width: 1023px)"
+            srcset="./images/lication-chilli2.png"
+          />
+          <img src="lication-chilli.png" alt="위니브 리케이션 속 칠리" />
+        </picture>
+      </section>
+    </main>
+  </body>
+</html>
