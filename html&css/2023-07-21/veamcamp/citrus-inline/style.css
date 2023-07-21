@@ -1,0 +1,45 @@
+.wrapper {
+  /* border 대신 box-shadow 사용하여 wrapper 설정 */
+  box-shadow: inset 0 0 20px black;
+  width: 800px;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fruit {
+  background-color: black;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 50%;
+}
+
+.fruit.lemon {
+  color: yellow;
+}
+
+.fruit.orange {
+  color: orange;
+}
+
+.fruit.jamong {
+  color: orangered;
+}
+
+.fruit.lemon:hover {
+  background: url(./images/lemon.png);
+  color: transparent;
+}
+
+.fruit.orange:hover {
+  background: url(./images/orange.png);
+  color: transparent;
+}
+
+.fruit.jamong:hover {
+  background: url(./images/jamong.png);
+  color: transparent;
+}
