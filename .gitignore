@@ -1,12 +1,12 @@
 **/images/
 **/img/
 **/favicon.ico
-**/challenges/preview.png
-**/challenges/preview.fig
+**/**/preview.png
+**/**/preview.fig
 **/challenges/readme.md
+**/challenges_2/readme.md
 **/mini/
 
-**/challenges_2
 **/challenges_3
 **/flexbox
 **/position
