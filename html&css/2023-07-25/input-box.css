@@ -1,0 +1,44 @@
+.txt-hide {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  /* 0px은 스크린리더가 못 읽을 수 있음! */
+  clip-path: inset(50%);
+}
+
+.labl-hold {
+  position: relative;
+}
+
+.labl-hold::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  border: 1px solid black;
+  vertical-align: -5px;
+}
+
+/* 키보드 포커스 처리 */
+.inphold:focus-visible + .labl-hold::before {
+  outline: 2px solid teal;
+  outline-offset: 2px;
+}
+
+.labl-hold::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 20px;
+  top: -1px;
+  background: url("./images/checkmark.png") 0 0/22px no-repeat;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.inphold:checked + .labl-hold::after {
+  left: 1px;
+  opacity: 1;
+}
