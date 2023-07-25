@@ -1,0 +1,272 @@
+/* reset */
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3 {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+}
+
+button:enabled {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* CSS 적용 */
+/* movie-list */
+.movie-list {
+  width: 1060px;
+  background: #f2f2f2;
+  margin: 91px auto;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+}
+
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 41px auto 37px auto;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 28px auto;
+}
+
+.header-info li button {
+  color: #828282;
+  font-weight: 500;
+}
+
+.header-info li:first-child button {
+  font-weight: 900;
+  color: #000;
+}
+
+.header-info li:nth-child(2) button {
+  margin: 0 60px;
+}
+
+/* main */
+main {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #fff;
+  margin: 0 28px 31px 29px;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px 23px;
+  padding: 26px 27px 30px 27px;
+}
+
+.cinema-card {
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cinema-inner {
+  padding: 19px 20px;
+}
+
+.cinema-inner img {
+  width: 100%;
+  aspect-ratio: 180/250;
+  object-fit: cover;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cinema-title {
+  font-weight: 900;
+  margin: 12px 0;
+
+  /* 말줄임 처리 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cinema-info {
+  font-size: 13px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.cinema-info .type {
+  color: #828282;
+  margin-right: 5px;
+}
+
+.cinema-info .star {
+  background-image: url(../img/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0.3em;
+  background-size: 1em;
+  padding-left: 1.2em;
+}
+
+.btn-group {
+  display: flex;
+  border-top: 1px solid #bdbdbd;
+}
+
+.btn-go,
+.btn-view {
+  background-color: #f2f2f2;
+  width: 100%;
+  font-size: 14px;
+  height: 41px;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+}
+
+.btn-go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0 10px;
+  border-right: 1px solid #bdbdbd;
+}
+
+.btn-go:focus-visible {
+  z-index: 1;
+}
+
+.btn-view {
+  border-radius: 0 0 10px 0;
+}
+
+.btn-view::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  background-image: url(../img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  vertical-align: middle;
+  margin: -2px 2px 0 -0.4em;
+}
+
+/* footer */
+footer {
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+footer div {
+  width: 1189px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div:first-child {
+  margin: 53px 0 42px 0;
+}
+
+.icon-list {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+}
+
+footer div:last-child {
+  margin: 36px 0 38px 0;
+}
+
+.address-list {
+  display: flex;
+  align-items: center;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.address-list li:not(:last-child) {
+  margin-right: 26px;
+}
+
+.address-list li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 17px;
+  margin-left: 20px;
+  background-color: #4f4f4f;
+
+  vertical-align: bottom;
+}
+
+.address-list span {
+  font-weight: 700;
+}
+
+.copyright {
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 700;
+}
