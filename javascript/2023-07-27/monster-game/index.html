@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>팔 하나 빠진 좀비</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <h1 class="a11y-hidden">좀비를 클릭해보세요!</h1>
+      <div class="zombie-wrapper">
+        <img
+          id="monster"
+          class="zombie"
+          src="./img/zombie.png"
+          alt="팔 하나 빠진 좀비"
+        />
+
+        <img
+          id="attack"
+          class="zombie-attack"
+          src="./img/attack.png"
+          alt="전투, 별 이미지"
+        />
+      </div>
+
+      <div class="eggplant-wrapper">
+        <img
+          id="character"
+          class="eggplant"
+          src="./img/eggplant.png"
+          alt="채소 가지"
+        />
+        <span id="hp" class="character-hp">HP: 3</span>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let hp = 3;
+      $("#monster").click(function () {
+        console.log("얍 공격!");
+        $("#attack").fadeIn();
+        $("#attack").animate({
+          left: "+=1500",
+        });
+        $("#attack").fadeOut(function () {
+          hp = hp - 1;
+          $("#hp").text("HP: " + hp);
+          // 공격이 캐릭터에 닿은 후 hp가 감소할 수 있도록 콜백함수 처리
+          if (hp == 0) {
+            $("#character").fadeOut();
+          }
+        });
+
+        $("#attack").css({ left: "800px" });
+      });
+    </script>
+  </body>
+</html>

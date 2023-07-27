@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또 번호 추첨</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>로또 번호 추첨</h1>
+    <script>
+      let randomBall = parseInt(Math.random() * 45 + 1);
+      // Math.random(): 0 이상 ~ 1 미만 실수(float)
+      // parseInt: 소수점은 버리고 정수로 변환. 실수에서 정수로!
+      // 1 이상 46 미만 정수 구하기
+
+      let lotto = [];
+      while (lotto.length < 6) {
+        let num = parseInt(Math.random() * 45 + 1);
+        if (lotto.indexOf(num) == -1) {
+          lotto.push(num);
+        }
+      }
+      // 1이상 45이하의 숫자들 중 랜덤으로 6개 출력
+      // 랜덤 출력한 숫자들 중 중복 있는지 if와 indexOf 사용하여 체크하기
+      // .indexOf(값): 값이 있으면 값의 위치를, 없으면 -1
+      // 공이 6개가 출력될 때까지 while문을 사용하여 반복
+
+      lotto.sort((a, b) => a - b);
+      document.write(lotto);
+      // .sort() 이용하여 배열 안 숫자 오름차순 정렬하기
+    </script>
+  </body>
+</html>

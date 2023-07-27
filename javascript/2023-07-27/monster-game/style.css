@@ -1,0 +1,63 @@
+body,
+h1 {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+h1 {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.background {
+  height: inherit;
+  background-color: rgb(178, 0, 0);
+  background-image: url("./img/forest.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.zombie-wrapper {
+  width: 1000px;
+  height: 80vh;
+  position: relative;
+}
+
+.zombie {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.character-hp {
+  color: white;
+  font-size: 7rem;
+  font-weight: bold;
+  margin-left: 5rem;
+}
+
+.zombie-attack {
+  position: absolute;
+  right: 0;
+  top: 20rem;
+  width: 200px;
+  height: 200px;
+  display: none;
+}
+
+.eggplant {
+  height: 50%;
+  cursor: pointer;
+}
