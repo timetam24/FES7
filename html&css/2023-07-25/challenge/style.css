@@ -1,0 +1,153 @@
+/* font */
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* reset */
+body,
+h1,
+h2,
+p,
+ul,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CSS 적용 */
+.modal {
+  width: 520px;
+  height: 712px;
+  border-radius: 10px;
+  border: 1px solid var(--c-4-c-4-c-4, #c4c4c4);
+  background: #fff;
+}
+
+/* input checkbox 커스텀 */
+.txt-hide {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+}
+
+.labl-hold {
+  position: relative;
+}
+
+.labl-hold::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  /* left: 20px;
+  top: -1px; */
+  background: url("./images/check-box.svg");
+
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+.inp-hold:focus-visible + .labl-hold::before {
+  outline: 2px solid black;
+  border-radius: 50%;
+}
+
+.inp-hold:checked + .labl-hold::before {
+  background-image: url("./images/check-box-on.svg");
+}
+
+/* .social-list li a {
+  font-family: "SpoqaHanSansNeo-Regular";
+  display: block;
+  width: 472px;
+  color: var(--767676, #767676);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #767676;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.social-list li .google {
+  border: 1px solid #767676;
+}
+
+.social-list li .facebook {
+  border: 1px solid #2d9cdb;
+}
+
+.social-list li .naver {
+  border: 1px solid #00bf18;
+}
+
+.social-list li .kakaotalk {
+  border: 1px solid #f2c94c;
+}
+
+.social-list li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url(./images/icon_sprites_retina.png);
+  background-size: 117px 84px;
+} */
+
+.google::before {
+  /* background: url("./images/google.png") 0 0/21px no-repeat; */
+  width: 22px;
+  height: 22px;
+  background-position: -52px -10px;
+}
+
+.facebook::before {
+  /* background: url("./images/facebook.png") 0 0/21px no-repeat; */
+  width: 13px;
+  height: 24px;
+  background-position: -93px -10px;
+}
+
+.naver::before {
+  /* background: url("./images/naver.png") 0 0/21px no-repeat; */
+  width: 22px;
+  height: 22px;
+  background-position: -10px -10px;
+}
+
+.kakaotalk::before {
+  /* background: url("./images/kakaotalk.png") 0 0/21px no-repeat; */
+  width: 22px;
+  height: 22px;
+  background-position: -10px -52px;
+}
