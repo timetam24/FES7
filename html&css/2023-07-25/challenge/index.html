@@ -4,35 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>로그인 | 위니브</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
-    <div class="modal-login on">
+    <div id="modal-login">
       <header>
         <h1>로그인 또는 회원가입</h1>
-        <img src="./images/close.png" alt="로그인 모달 닫기" />
+        <img
+          class="modal-close"
+          src="./images/modal-close.png"
+          alt="로그인 모달 닫기"
+        />
       </header>
-      <main id="appLogin">
-        <section>
-          <h2>위니브에서 여러분의 궁금증을 해결하세요!:</h2>
-          <form action="">
-            <input type="text" placeholder="아이디" />
-            <input type="password" placeholder="비밀번호" />
+      <main>
+        <section class="weniv-login">
+          <h2>위니브에서 여러분의 궁금증을 해결하세요! :&#41;</h2>
+          <form action="#" class="login-form">
+            <input type="text" class="user-id" placeholder="아이디" />
+            <p class="hidden id-error">아이디를 입력해주세요.</p>
+            <input
+              type="password"
+              class="user-password"
+              placeholder="비밀번호"
+            />
+            <p class="hidden pwd-error">비밀번호를 입력해주세요.</p>
             <input type="checkbox" id="inpHold" class="inp-hold txt-hide" />
             <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
-            <button>로그인</button>
+            <button class="login-btn">로그인</button>
           </form>
-          <div>
+          <div class="login-service">
             <a href="#">회원가입</a>
             <a href="#">아이디/비밀번호 찾기</a>
           </div>
         </section>
-        <div>또는</div>
+        <div class="or">또는</div>
         <section>
           <h3 class="txt-hide">소셜서비스로 로그인</h3>
-          <ul class="link-sns-login">
+          <ul>
             <li><a href="" class="icon-google">구글 계정으로 로그인</a></li>
             <li>
               <a href="" class="icon-facebook">페이스북 계정으로 로그인</a>
@@ -44,6 +53,8 @@
           </ul>
         </section>
       </main>
+
+      <script src="./app.js"></script>
     </div>
   </body>
 </html>

@@ -3,7 +3,7 @@
   font-family: "SpoqaHanSansNeo-Regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
     format("woff");
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -11,9 +11,11 @@
 body,
 h1,
 h2,
+h3,
 p,
 ul,
-button {
+button,
+input {
   padding: 0;
   margin: 0;
 }
@@ -42,15 +44,12 @@ a {
 }
 
 /* CSS 적용 */
-.modal {
-  width: 520px;
-  height: 712px;
-  border-radius: 10px;
-  border: 1px solid var(--c-4-c-4-c-4, #c4c4c4);
-  background: #fff;
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-size: 16px;
+  color: #767676;
 }
 
-/* input checkbox 커스텀 */
 .txt-hide {
   overflow: hidden;
   width: 1px;
@@ -58,21 +57,106 @@ a {
   clip-path: inset(50%);
 }
 
+#modal-login {
+  width: 520px;
+  height: 712px;
+  border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* header */
+header {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 188px;
+  padding-right: 24px;
+  border-bottom: 1px solid #c4c4c4;
+  box-sizing: border-box;
+}
+
+header h1 {
+  word-spacing: 2.2px;
+  color: #000;
+}
+
+.modal-close {
+  width: 16px;
+  height: 16px;
+}
+
+/* main */
+main {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* 위니브 로그인 */
+.weniv-login h2 {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  line-height: 24px;
+  color: #000;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* login-form input: 아이디, 비밀번호 */
+[class^="user"] {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #c4c4c4;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.user-password {
+  margin-top: 10px;
+}
+
+/* 변동값 */
+.hidden {
+  display: none;
+}
+
+.id-error,
+.pwd-error,
+.inconsistency-error {
+  color: #f4492e;
+  font-size: 14px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.focus {
+  border: 2px solid #f4492e;
+}
+
+/* input checkbox 커스텀 */
 .labl-hold {
   position: relative;
+  margin-top: 13px;
+  margin-left: 4px;
 }
 
 .labl-hold::before {
   content: "";
-  position: absolute;
+  display: inline-block;
   width: 22px;
   height: 22px;
-  /* left: 20px;
-  top: -1px; */
-  background: url("./images/check-box.svg");
-
-  transition: all 0.3s ease;
   margin-right: 8px;
+  vertical-align: -5px;
+  background: url("./images/check-box.svg");
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .inp-hold:focus-visible + .labl-hold::before {
@@ -84,70 +168,108 @@ a {
   background-image: url("./images/check-box-on.svg");
 }
 
-/* .social-list li a {
-  font-family: "SpoqaHanSansNeo-Regular";
-  display: block;
-  width: 472px;
-  color: var(--767676, #767676);
-  font-size: 16px;
-  font-weight: 500;
-  margin: 0 auto;
+.login-btn {
+  margin: 20px 0;
   border-radius: 5px;
-  border: 1px solid #767676;
+  background: #2f80ed;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.login-service {
+  font-size: 14px;
   text-align: center;
-  padding: 10px 0;
+}
+
+.login-service a:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  margin-left: 12px;
+  margin-right: 12px;
+  vertical-align: -2px;
+  background-color: #767676;
+}
+
+/* 또는 */
+.or {
+  text-align: center;
+  font-size: 14px;
+  margin: 30px auto 18px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  display: block;
+  width: 210px;
+  height: 1px;
+  background-color: #767676;
+}
+
+/* 소셜 로그인 */
+[class^="icon"] {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 13px 0;
   position: relative;
   margin-bottom: 10px;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 
-.social-list li .google {
+.icon-google {
   border: 1px solid #767676;
 }
 
-.social-list li .facebook {
+.icon-facebook {
   border: 1px solid #2d9cdb;
 }
 
-.social-list li .naver {
+.icon-naver {
   border: 1px solid #00bf18;
 }
 
-.social-list li .kakaotalk {
+.icon-kakaotalk {
   border: 1px solid #f2c94c;
 }
 
-.social-list li a::before {
+[class^="icon"]::before {
   content: "";
   position: absolute;
   display: block;
+  width: 25px;
+  height: 25px;
   background-image: url(./images/icon_sprites_retina.png);
   background-size: 117px 84px;
-} */
+}
 
-.google::before {
+.icon-google::before {
   /* background: url("./images/google.png") 0 0/21px no-repeat; */
-  width: 22px;
-  height: 22px;
   background-position: -52px -10px;
 }
 
-.facebook::before {
+.icon-facebook::before {
   /* background: url("./images/facebook.png") 0 0/21px no-repeat; */
-  width: 13px;
-  height: 24px;
   background-position: -93px -10px;
 }
 
-.naver::before {
+.icon-naver::before {
   /* background: url("./images/naver.png") 0 0/21px no-repeat; */
-  width: 22px;
-  height: 22px;
   background-position: -10px -10px;
 }
 
-.kakaotalk::before {
+.icon-kakaotalk::before {
   /* background: url("./images/kakaotalk.png") 0 0/21px no-repeat; */
-  width: 22px;
-  height: 22px;
   background-position: -10px -52px;
 }
