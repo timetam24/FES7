@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        /* max-width: 100%; */
+      }
+      /* max-width: 100%는 '원본 이미지의 width'까지만 커진다. 확대해도 이미지가 깨지지 않음.*/
+
+      article {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80");
+        background-repeat: no-repeat;
+        /* center를 기준으로 반응형으로 동작 */
+        background-size: cover;
+        background-position: center;
+        /* //center를 기준으로 반응형으로 동작 */
+        /* 축약형
+  background: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHw%3D&w=1000&q=80") center/cover no-repeat; */
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <!-- <img
+        src="https://cdn.pixabay.com/photo/2023/07/16/04/14/bird-8130023_1280.png"
+        alt="새"
+      /> -->
+    </article>
+  </body>
+</html>
