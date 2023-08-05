@@ -31,6 +31,7 @@ const loginBtnHandler = (event) => {
       "아이디를 입력해주세요.",
       userPwd
     );
+    return;
   } else if (userId.value.trim()) {
     // 아이디 입력 시
     userId.classList.remove("focus");
@@ -45,11 +46,13 @@ const loginBtnHandler = (event) => {
         "비밀번호를 입력해주세요.",
         userPwd.nextSibling
       );
+      return;
     } else if (userPwd.value.trim()) {
       // 아이디 입력 & 비밀번호 입력 시
       userPwd.classList.remove("focus");
       if (userId.value !== "weniv07" && userPwd.value !== "frontend07!") {
         secondErrorMsg.innerText = "아이디 혹은 비밀번호가 일치하지 않습니다.";
+        return;
       } else {
         removeErrorMsg(secondErrorMsg);
         alert("로그인 성공!");
