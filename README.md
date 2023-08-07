@@ -19,3 +19,4 @@
 | 2023-08-01 | JavaScript 기초 / 변수 / Type - 원시타입                                                                                             | 변수 / Type - 원시타입                                                                                             |
 | 2023-08-02 | 변수 / 연산 / 조건문                                                                                                                 | 〃                                                                                                                 |
 | 2023-08-03 | isNaN / boolean / undefined / null / BigInt / function / 함수의 특징 / 함수 파라미터 / 함수의 종류 / array                           |
+| 2023-08-07 | splice / slice / sort / forEach / map / filter / reduce / includes / join / reverse                                                  |
