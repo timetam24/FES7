@@ -1,0 +1,26 @@
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.article .article-content {
+  font-size: 14px;
+  opacity: 0.7;
+}
+i {
+  opacity: 0.5;
+}
+
+.one {
+  color: red;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: blue;
+}
+.four {
+  color: pink;
+}/*# sourceMappingURL=008.css.map */

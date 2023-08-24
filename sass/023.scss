@@ -1,0 +1,36 @@
+// @mixin sample {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 200px;
+// }
+
+// .one {
+//   @include sample;
+//   background-color: red;
+// }
+
+// .two {
+//   @include sample;
+//   background-color: blue;
+// }
+
+@mixin sample {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  @content;
+}
+
+.one {
+  @include sample {
+    background-color: red;
+  }
+}
+
+.two {
+  @include sample {
+    background-color: green;
+  }
+}
