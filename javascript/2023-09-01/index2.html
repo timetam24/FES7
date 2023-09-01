@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const orderTea = new Promise((resolve, reject) => {
+        const requestObj = new XMLHttpRequest();
+        requestObj.open("GET", "orderTea.txt");
+        requestObj.onreadystatechange = () => {
+          if (requestObj.readyState === 4) {
+            if (requestObj.status === 200) {
+              // 통신성공
+              const result = requestObj.responseText;
+              resolve(result);
+            } else {
+              // 통신실패 예외처리
+              reject(
+                new Error(`오늘의 티가 다 소진되었습니다. ${requestObj.status}`)
+              );
+            }
+          }
+        };
+        requestObj.send();
+      });
+
+      orderTea
+        .then((asyncResult) => {
+          console.log(asyncResult);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>
