@@ -83,7 +83,7 @@ main {
     margin: 67px auto;
   }
 }
-/* 768까지 적용하겠다. */
+/* 748까지 적용하겠다. */
 @media (max-width: 748px) {
   main {
     grid-template-areas:
@@ -118,7 +118,6 @@ main {
 .section3 .get-list {
   flex-grow: 1;
   flex-basis: 364px;
-  flex-shrink: 0;
 }
 .section3 h2 {
   text-align: center;
